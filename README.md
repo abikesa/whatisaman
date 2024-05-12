@@ -17,11 +17,11 @@
 2. [Pentatonic](https://en.wikipedia.org/wiki/Seven_Samurai): body, mind, soul, community, politik
 ### Surplus
 ##### 11th, 13th 
-3. [Diatonic/Mundane](https://en.wikipedia.org/wiki/The_Good,_the_Bad_and_the_Ugly): prediction
-4. [Chromatic](https://en.wikipedia.org/wiki/No_Country_for_Old_Men): fit
+3. [Diatonic/Mundane](https://en.wikipedia.org/wiki/The_Good,_the_Bad_and_the_Ugly): prediction/vision
+4. [Chromatic](https://en.wikipedia.org/wiki/No_Country_for_Old_Men): fit/reliability
 ### Competition
 ##### ♭9,♯9,♯11,♭13 
-5. Temperament/[Heretical](https://www.gutenberg.org/cache/epub/27458/pg27458-images.html): update
-6. [Expression](https://www.youtube.com/watch?v=e4Vp7Fpv5BI)/[Aggressive](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1600-6143.2011.03789.x): open
+5. Temperament/[Heretical](https://www.gutenberg.org/cache/epub/27458/pg27458-images.html): iterating/adapting
+6. [Expression](https://www.youtube.com/watch?v=e4Vp7Fpv5BI)/[Aggressive](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1600-6143.2011.03789.x): open/transparent
 
  
