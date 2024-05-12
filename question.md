@@ -1,0 +1,5 @@
+1. Michelangelo: David (no mere boy)
+2. Raphael: Ambiguous (school of athens)
+3. Amadeus: Lacrisoma (qua resurgit ex ... )
+4. Nietzsche: Domination (lady macbeth)
+5. Shakespeare: Holding it down (or losing it.. Macbeth)
