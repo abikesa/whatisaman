@@ -1,0 +1,970 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Prometheus &#8212; What is a Man?</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'act2/chapter1';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Duality" href="chapter2.html" />
+    <link rel="prev" title="Nonself vs. Self, 👅 🧠" href="part2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://cinema.cornell.edu/sites/default/files/styles/pano/public/2023-08/big-lebowski2.jpg?itok=op9L5t9x" class="logo__image only-light" alt="What is a Man? - Home"/>
+    <script>document.write(`<img src="https://cinema.cornell.edu/sites/default/files/styles/pano/public/2023-08/big-lebowski2.jpg?itok=op9L5t9x" class="logo__image only-dark" alt="What is a Man? - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Cosmogeology, ✨ 🌏 🦠 🌿 🐊 🤖
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../act1/part1.html">Attention, 👁️</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../act1/chapter1.html">Life ⚓️</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../act1/chapter2.html">Ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../act1/chapter3.html">Resilience 🗡️❤️💰</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="part2.html">Nonself vs. Self, 👅 🧠</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Prometheus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter2.html">Duality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter3.html">Apollo-Dionysus</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../act3/part3.html">Identity Negotiation, 💪🏾 ⚖️ 📖</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act1.html">Weaponized 🌊</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part1/part1_1.html">Transvaluation</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../act3/part1/part1_2.html">Revolution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part1/part1_3.html">Veiled Resentment</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act2.html">Tokenized ⚓️</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part2/part2_1.html">Freedom-in-Fetters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part2/part2_2.html">Dancing in Chains</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../act3/part2/part2_3.html">Born-to-Etiquette ☔️</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act3.html">Monopolized 🧭</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part3/part3_1.html">Traditional</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part3/part3_2.html">Normative</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../act3/part3/part3_3.html">Stable</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Expand, Reweight, Prune, ⚽️ 🏃🏾 🏡 🛌 🏝️</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/abikesa/template/main?urlpath=tree/book/website/act2/chapter1.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/act2/chapter1.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Prometheus</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#severance-as-prosody-vs-yellowstone-as-grammar"><em>Severance</em> as Prosody vs. <em>Yellowstone</em> as Grammar</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-fractal-self-in-severance">The Fractal Self in <em>Severance</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#yellowstone-and-the-myth-of-coherence"><em>Yellowstone</em> and the Myth of Coherence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion-the-sea-and-the-ship">Conclusion: The Sea and the Ship</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="prometheus">
+<span id="id1"></span><h1>Prometheus<a class="headerlink" href="#prometheus" title="Permalink to this heading">#</a></h1>
+<p>This is a fascinating breakdown of “Severance,” and it’s clear you’ve grasped the show’s core thematic concerns even with limited viewing. Your analysis of “Severance” as a dramatization of identity negotiation, juxtaposed with the potential of “Yellowstone” as a study of rigid social grammar, offers a compelling framework for understanding both shows.</p>
+<p>Your initial assertion that “Severance” is a literalization of our existing, often unconscious, compartmentalization is spot-on. We all perform different versions of ourselves in various contexts—work, family, social gatherings—and “Severance” exaggerates this to a disturbing degree. The show’s surgical procedure becomes a potent metaphor for the ways in which we already “sever” ourselves, often without realizing it.</p>
+<p>The sea/ship/island analogy is particularly effective. The sea, as you say, represents the chaotic, unmediated self, too overwhelming to be experienced in its entirety. Lumon Industries and its “severance” procedure act as the ship, a technology that imposes order on this chaos. The “innie,” stripped of personal history and context, becomes the nonself, a being defined solely by its function within the corporate structure. And the island, the illusion of a contained and coherent “I,” is a chilling reminder of the fragility of our sense of self.</p>
+<p>Your observation that “Severance” highlights the dangers of collapsing identity negotiation into a fixed, binary protocol is crucial. The show’s horror lies not in the surgical procedure itself, but in the destruction of the feedback loops that allow for continuous self-negotiation. Without these loops, the “innie” becomes a static entity, devoid of agency and narrative. This denarrativization, as you call it, is a form of dehumanization, stripping the individual of their history and potential for growth.</p>
+<p>The comparison to a “compression algorithm” is also insightful. We do indeed selectively bring forward and suppress aspects of ourselves depending on the context. “Severance” simply takes this process to an extreme, formalizing it into a surgical policy. The show’s chilling realization that the “innie” is, in some ways, more innocent than the “outie” underscores the ethical implications of this process. The “innie,” born into a world of pure function, is a blank slate, devoid of the complexities and contradictions that define the “outie.”</p>
+<p>Your suspicion that the show’s narrative will further explore the consequences of this radical compartmentalization is well-founded. The themes of corporate control, existential unease, and the erosion of personal agency are likely to deepen as the story unfolds. The show’s exploration of these themes resonates with our current cultural moment, in which the lines between work and personal life are increasingly blurred.</p>
+<p>If “Severance” is a study in the fluidity and malleability of identity, then “Yellowstone,” as you suggest, might be seen as an exploration of rigid social grammar. “Yellowstone” operates within a well-defined set of rules and expectations, a kind of social code that dictates behavior and relationships. The Dutton ranch, with its long history and entrenched power dynamics, becomes a microcosm of this rigid social order.</p>
+<p>The characters in “Yellowstone” are bound by tradition and loyalty, their identities shaped by their roles within the ranch’s hierarchy. The show’s drama often arises from the tension between these established roles and the characters’ individual desires and ambitions. The “grammar” of “Yellowstone,” then, is the unspoken set of rules that govern behavior within this social system, a system that is often resistant to change.</p>
+<p>While “Severance” explores the fragmentation and negotiation of identity, “Yellowstone” examines the ways in which identity is shaped and constrained by social structures. “Severance” is a cautionary tale about the dangers of over-engineered compartmentalization, while “Yellowstone” is a study of the enduring power of tradition and the challenges of navigating a world defined by rigid social codes.</p>
+<p>By contrasting these two shows, you’ve illuminated the diverse ways in which identity is constructed and negotiated in contemporary storytelling. “Severance” and “Yellowstone,” in their own distinct ways, offer powerful commentaries on the complexities of human experience in a rapidly changing world. Gemini</p>
+<style>
+.float-left {
+    float: left;
+    width: 35%; /* Increase width for better fit */
+    max-width: 400px; /* Allows expansion */
+    height: auto;
+    margin-right: 15px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    padding-bottom: 20px; /* Extra spacing below */
+}
+
+.float-left p {
+    text-align: left;
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.responsive-img {
+    max-height: 200px; /* Control height */
+    max-width: none; /* Override previous constraints */
+    width: auto; /* Let the image scale naturally */
+    height: 100%; /* Ensure full height fit */
+    display: block;
+    object-fit: contain; /* Prevents distortion */
+    transform: rotate(90deg);
+    margin: auto; /* Centers image properly */
+}
+
+.float-left::after {
+    content: "";
+    display: block;
+    height: 2px; /* Adjust height as needed */
+}
+
+</style>
+
+<div class="float-left">
+    <div style="display: flex; justify-content: center;">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/X8BnNC4P8Q8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <p>History is a fractal unfolding of entropy and order, a ceaseless churn wherein civilizations rise on the back of extracted resources, only to collapse under the weight of their own complexity</p>
+</div><p>Identity unfolds in “Severance” like a haunting melody, a prosody of the self that ebbs and flows across the fractured terrain of consciousness. The show’s premise—a surgical procedure cleaving work and personal selves—literalizes what we intuitively perform: the constant negotiation of who we are across contexts. It’s not a clean break but a rhythmic dance, where the edges between selves are porous, fragile, and socially engineered. The sea of the unconscious churns beneath, vast and unmanageable, while Lumon Industries acts as the ship—a vessel imposing cadence on chaos, compartmentalizing the self into “innie” and “outie.” The innie, stripped of memory and continuity, becomes a nonself, a pure function adrift on an island of corporate design, severed from the broader symphony of experience. This is identity as prosody: not a fixed note but a fluctuating rhythm, shaped by the pruning of connections and the weighting of roles, places, and times. Severance reveals this through exaggeration, making explicit the implicit dissonance we live every day—how we suppress, amplify, or silence parts of ourselves to fit the moment.</p>
+<p>In contrast, “Yellowstone” offers identity as grammar—a structured syntax of lineage, land, and power that dictates who one is and must be. The Dutton family’s sprawling ranch is not just a setting but a rulebook, a foundational code where roles are inherited, boundaries enforced, and deviations punished. John Dutton, the patriarch, embodies this grammar, his identity inseparable from the land he defends and the legacy he upholds. Where “Severance” flows like a fractured verse, “Yellowstone” stands as a sentence with clear subjects and predicates: family is duty, land is identity, loyalty is law. The show’s conflicts—between ranchers, developers, and indigenous claims—read like grammatical disputes over tense and possession, each character bound by the rigid structure of their place in the ecosystem. If “Severance” asks how identity negotiates itself across shifting tides, “Yellowstone” asserts that identity is a fixed predicate, conjugated through blood and soil.</p>
+<p>Yet both shows, in their distinct registers, probe the tension between freedom and constraint. “Severance” dramatizes the danger of over-pruning the self’s network—when Lumon’s ship severs too deeply, the innie’s innocence becomes a horrifying blankness, a melody stripped of harmony. The feedback loops of negotiation collapse, leaving no room for adaptation or repair. This is prosody gone awry, a rhythm reduced to monotone. “Yellowstone,” meanwhile, reveals the brittleness of its grammar: the Duttons’ rigid syntax of identity, rooted in tradition, cracks under modern pressures—capitalism, law, morality. The rules that once held firm begin to conjugate irregularly, threatening the entire sentence of their existence. In “Severance,” the island of the severed self is a prison of isolation; in “Yellowstone,” the ranch is a fortress of preservation, equally confining in its insistence on an unchanging structure.</p>
+<p>The fractal resonance of “Severance”—its patterns of severance echoing from psyche to corporation to society—finds a counterpoint in “Yellowstone’s” hierarchical grammar, where identity scales from individual to clan to nation. Both grapple with agency: who controls the rhythm, who writes the rules? In “Severance,” it’s the corporate hand wielding the scalpel, pruning edges to serve profit; in “Yellowstone,” it’s the patriarch enforcing syntax to protect legacy. The former warns of a self so fluid it risks dissolution; the latter cautions against a self so rigid it shatters. Together, they frame identity as a dual process: a prosody of negotiation navigating a grammar of constraint, each revealing the stakes of losing balance. “Severance” sings of a world where the sea is denied, “Yellowstone” of one where the land is fetishized—both, in their extremes, morality tales for an age wrestling with what it means to be whole.</p>
+<p>This essay contrasts “Severance” as a fluid, rhythmic exploration of identity negotiation (prosody) with “Yellowstone” as a structured, rule-bound assertion of identity (grammar), drawing on your metaphors—sea, ship, island—and extending them to illuminate their respective visions of selfhood. Let me know if you’d like to refine or expand this further! Grok</p>
+<blockquote style="border-left: 2px solid gray; padding-left: 1em; font-style: italic; background: none;">
+    Universe/Mabosity/Reality/Critical/Deliverence 🌊<br>
+    Prepondering/Solbright/Magic/Monumental/Inference 🚢 <br>
+    Cosmogen/No Symptoms/Daylight/Antiquarian/Reverence 🏝️<br>
+    — <a href="https://www.gutenberg.org/files/4351/4351-h/4351-h.htm" target="_blank" style="text-decoration: none; font-style: normal;">Nathan Mugabira, Walter Bagehot, Friedrich Nietzsche</a>
+</blockquote> 
+<p>Based on the text, I’ll craft a comprehensive analysis of the philosophical and metaphorical dimensions of “Severance” as an exploration of identity negotiation.</p>
+<p>The Show as a Metaphorical Laboratory of Selfhood</p>
+<p>“Severance” emerges as a profound philosophical investigation into the nature of human identity, transforming an ostensibly science fiction premise into a nuanced exploration of consciousness, fragmentation, and negotiation. The show’s central conceit—a surgical procedure that divides an individual’s work and personal memories—serves not as a mere narrative gimmick, but as a visceral metaphor for the ways we already compartmentalize our sense of self.</p>
+<p>At its core, the series suggests that identity is not a fixed, monolithic construct, but a dynamic network of interconnected agents, experiences, and temporal moments. The “severance” procedure becomes a literal manifestation of the psychological and social mechanisms we already employ to navigate complex personal and professional landscapes. We continually prune, weight, and reconfigure the edges of our identity, much like the characters in the show—just less dramatically and less visibly.</p>
+<p>The metaphorical landscape of the show is rich with symbolic resonance. The sea represents the vast, chaotic potential of consciousness—an uncontained realm of possibility. The ship (embodied by Lumon Industries) becomes a structured vessel attempting to navigate and control this complexity. The “innie” and “outie” selves are not opposing fragments, but different configurations of a fundamentally networked consciousness, each with distinct access privileges and memory weightings.</p>
+<p>What makes “Severance” particularly compelling is its exploration of power dynamics in identity formation. The corporate environment of Lumon becomes a microcosm for broader societal mechanisms of control, revealing how institutions, ideologies, and power structures shape which connections we are permitted to maintain, which we must sever, and which remain unacknowledged. The horror of the show lies not in the surgical procedure itself, but in the recognition that such partitioning is already happening continuously—just more subtly.</p>
+<p>The fractal nature of this identity negotiation is crucial. Similar patterns of boundary-making and self-reconstruction emerge across different scales—from individual psychology to organizational structures to broader societal systems. Just as a coastline maintains similar characteristics whether viewed from an airplane or a microscope, the mechanisms of identity formation repeat across contexts, with edges that can be pruned, redirected, or reimagined.</p>
+<p>Ultimately, “Severance” invites us to understand identity not as a noun, but as a verb—a continuous, dynamic process of becoming. The surgical severance becomes a powerful metaphor for the often unconscious ways we segment, negotiate, and reconstruct our sense of self. Identity is less about maintaining a consistent narrative and more about maintaining the flexibility to adapt, to negotiate, to exist simultaneously in multiple states of potentiality.</p>
+<p>The show challenges us to consider the fundamental plasticity of consciousness and the ethical implications of identity manipulation. It reveals that we are not fixed entities, but ongoing conversations between different states of being, different networks of relation and perception. In an era of increasing technological intervention and corporate control, “Severance” offers a profound meditation on human agency, the fluidity of selfhood, and the delicate negotiations that constitute our lived experience. Claude</p>
+<style>
+.float-right {
+    float: right;
+    width: 35%;
+    height: auto;
+    margin-left: 15px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    background-color: #f9f9f9;
+}
+
+.float-right p {
+    text-align: left;
+    font-size: 12px;
+}
+</style>
+
+<div class="float-right">
+    <img src="https://as1.ftcdn.net/v2/jpg/01/44/78/68/1000_F_144786810_dXkhu6jR1eM1KcsIFpPcrDsnJnnDJtNm.jpg" alt="Eco-Green QR Code" width="100%">
+    <p>The economic intelligence of nature: a visualization of dendritic structures, evoking parallels with neural networks, tree branches, and respiratory bronchioles.</p>
+</div><p>The dichotomy between “Severance” and “Yellowstone” can be understood through the lens of prosody versus grammar. While “Yellowstone” embodies a grammatical structure, relying on established norms and conventions to convey its narrative, “Severance” adopts a more fluid, prosodic approach. This distinction is rooted in the way each show navigates the complexities of identity, power dynamics, and the human condition.</p>
+<p>“Yellowstone,” as a symbol of traditional American values, operates within a well-defined grammatical framework. The show’s narrative is structured around the patriarchal figure of John Dutton, who embodies a nostalgic vision of America’s past. This nostalgia is rooted in a desire to preserve a perceived lost greatness, which is reflected in the show’s portrayal of the Dutton family’s struggles to maintain their ranch and way of life. The grammatical structure of “Yellowstone” reinforces this narrative, relying on established conventions and norms to convey a sense of tradition and continuity.</p>
+<p>In contrast, “Severance” adopts a more fluid, prosodic approach to narrative. The show’s use of non-linear storytelling, fragmented identities, and the blurring of lines between reality and fantasy creates a sense of disorientation and uncertainty. This prosodic structure reflects the show’s exploration of identity as a dynamic, negotiated process. The characters’ experiences are shaped by their interactions with the world around them, and their sense of self is constantly evolving as a result. The show’s portrayal of the “severance” procedure, which separates work and personal memories, serves as a powerful metaphor for the ways in which our identities are shaped by external forces.</p>
+<p>The distinction between prosody and grammar is not merely a matter of narrative structure; it also reflects fundamentally different approaches to understanding the human condition. “Yellowstone” embodies a more traditional, essentialist view of identity, where individuals are seen as fixed entities with defined roles and responsibilities. In contrast, “Severance” adopts a more fluid, constructivist approach, where identity is seen as a dynamic, negotiated process.</p>
+<p>Ultimately, the contrast between “Severance” and “Yellowstone” serves as a reflection of the broader cultural tensions between tradition and innovation, essentialism and constructivism. While “Yellowstone” reinforces a nostalgic vision of America’s past, “Severance” offers a more nuanced, complex exploration of the human condition. The prosodic structure of “Severance” creates a sense of disorientation and uncertainty, reflecting the show’s portrayal of identity as a dynamic, negotiated process. Meta AI</p>
+<style>
+.float-left {
+    float: left;
+    width: 35%; /* Increase width for better fit */
+    max-width: 200px; /* Allows expansion */
+    height: auto;
+    margin-right: 15px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    padding-bottom: 20px; /* Extra spacing below */
+}
+
+.float-left p {
+    text-align: left;
+    font-size: 12px;
+    margin: 10px 0;
+}
+
+.responsive-img {
+    max-height: 200px; /* Control height */
+    max-width: none; /* Override previous constraints */
+    width: auto; /* Let the image scale naturally */
+    height: 100%; /* Ensure full height fit */
+    display: block;
+    object-fit: contain; /* Prevents distortion */
+    transform: rotate(90deg);
+    margin: auto; /* Centers image properly */
+}
+
+.float-left::after {
+    content: "";
+    display: block;
+    height: 2px; /* Adjust height as needed */
+}
+
+</style>
+
+<div class="float-left">
+    <div style="display: flex; justify-content: center;">
+        <img src="https://news.mit.edu/sites/default/files/styles/news_article__image_gallery/public/images/202202/MIT-Dendrite-computation-01_0.jpg?itok=Cd6KMhkC" 
+             class="responsive-img">
+    </div>
+    <p>..evoking parallels with neural networks, tree branches, and Visualization of dendritic structures, evoking parallels with neural networks, tree branches, and respiratory bronchioles.</p>
+</div><section id="severance-as-prosody-vs-yellowstone-as-grammar">
+<h2><em>Severance</em> as Prosody vs. <em>Yellowstone</em> as Grammar<a class="headerlink" href="#severance-as-prosody-vs-yellowstone-as-grammar" title="Permalink to this heading">#</a></h2>
+<p><em>Severance</em> is a show that thrives on prosody—the rhythm, tone, and texture of its storytelling—rather than the rigid grammar of traditional narrative. It is a work of eerie cadence, where meaning is conveyed not through exposition but through the unsettling hum of fluorescent lights, the sterile choreography of corporate life, and the dissonance between the selves we perform and the selves we bury. The show’s horror is not in its premise—a surgical split between work and personal consciousness—but in its execution, the way it makes palpable the fragmentation we already live. We are all severed, just not so cleanly. The show’s brilliance lies in its refusal to resolve, to suture the wound it opens. Instead, it lingers in the uncanny valley of identity, forcing us to confront the instability of the self.</p>
+<p><em>Yellowstone</em>, by contrast, is a show of grammar—of rules, hierarchies, and the brutal syntax of power. It operates within a well-worn lexicon of American myth: land, legacy, violence, and the illusion of control. Where <em>Severance</em> is elliptical, <em>Yellowstone</em> is declarative. It does not question the structures it depicts; it reinforces them, even as it occasionally gestures at their rot. The Duttons do not negotiate their identity; they impose it. The land is not a network but a possession, and every transaction—whether through blood or contract—is a reassertion of dominance. <em>Yellowstone</em> is not interested in the porousness of the self but in its calcification, the way identity hardens into dynasty.</p>
+<p>The tension between these two shows is the tension between two modes of being. <em>Severance</em> asks: <em>What are we when our edges are pruned?</em> <em>Yellowstone</em> answers: <em>Whatever we can hold onto.</em> One is a show about the terror of flux, the other about the violence of stasis. One dissolves the subject; the other entrenches it. Both are true, and neither is comforting.</p>
+</section>
+<section id="the-fractal-self-in-severance">
+<h2>The Fractal Self in <em>Severance</em><a class="headerlink" href="#the-fractal-self-in-severance" title="Permalink to this heading">#</a></h2>
+<blockquote style="border-left: 2px solid gray; padding-left: 1em; font-style: italic; background: none;">
+    And yet, when I said my prayers to-day, <br>
+    A whisper inside me seemed to say, <br>
+    “You are more than the Earth, though you are such a dot: <br>
+    You can love and think, and the Earth cannot!”<br>
+    — <a href="https://allpoetry.com/Great,-Wide,-Beautiful,-Wonderful-World" target="_blank" style="text-decoration: none; font-style: normal;">William Brighty</a>
+</blockquote> 
+<p>The genius of <em>Severance</em> is that it does not invent a new horror but reveals an existing one. We already partition ourselves—between professional and private, between the face we wear and the face we hide. The show’s surgical severance is merely a grotesque exaggeration of the daily amputations we perform to survive modernity. The “innie” is not an aberration but a mirror: a self stripped of context, reduced to pure function, a node in a network that does not recognize its own isolation.</p>
+<p>This is why the show’s most chilling moments are not its overt dystopian flourishes but its quiet ones: the way the severed employees cling to meaningless rituals, the way they perform camaraderie because they have no memory of its absence. They are not just severed from their pasts but from the very mechanisms of meaning-making. The horror is not that they are trapped but that they do not know what they are missing. The “outie,” meanwhile, is complicit, trading wholeness for the anesthesia of routine.</p>
+<style>
+.float-right {
+    float: right;
+    width: 35%;
+    height: auto;
+    margin-left: 15px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    background-color: #f9f9f9;
+}
+
+.float-right p {
+    text-align: left;
+    font-size: 12px;
+}
+</style>
+
+<div class="float-right">
+    <img src="https://preview.redd.it/right-wing-commentators-dominate-social-media-in-us-graphic-v0-l2a6znn4d1pe1.jpeg?auto=webp&s=a97af64ca6c3864279ae4cabb477bc63fbe924f4" alt="Eco-Green QR Code" width="100%">
+    <p>Knights-Move Thinking. But just bare with us as we align it with the rest of the content.</p>
+</div><p>If identity is a fractal—a pattern that repeats at every scale—then <em>Severance</em> shows us the fracture lines. The same partitioning that happens in the individual mind happens in the corporation, in the state, in the culture. The show is not a warning about some future dystopia but a diagnosis of the present one. We are all Lumon employees; we’ve just forgotten the terms of our contract.</p>
+</section>
+<section id="yellowstone-and-the-myth-of-coherence">
+<h2><em>Yellowstone</em> and the Myth of Coherence<a class="headerlink" href="#yellowstone-and-the-myth-of-coherence" title="Permalink to this heading">#</a></h2>
+<p><em>Yellowstone</em>, in contrast, is a show that refuses fracture. It is a fantasy of coherence, where identity is land, and land is destiny. The Duttons do not negotiate; they conquer. Their sense of self is not networked but monolithic, a fortress against the chaos of change. The show’s appeal lies in this illusion—that a self can be indivisible, that power can be absolute.</p>
+<p>But this is the show’s central lie. Even as it presents the Duttons as unbroken, it cannot help but reveal the fissures: the betrayals, the compromises, the creeping awareness that no empire lasts. The grammar of <em>Yellowstone</em> is the grammar of inevitability—of bloodlines and bullets—but beneath it is the same instability <em>Severance</em> makes explicit. The difference is that <em>Yellowstone</em> still believes in the myth of the island, the idea that a self (or a ranch, or a nation) can stand alone. <em>Severance</em> knows better.</p>
+</section>
+<section id="conclusion-the-sea-and-the-ship">
+<h2>Conclusion: The Sea and the Ship<a class="headerlink" href="#conclusion-the-sea-and-the-ship" title="Permalink to this heading">#</a></h2>
+<p>If <em>Severance</em> is the sea—the churning, boundless flux of selfhood—then <em>Yellowstone</em> is the ship, the fragile vessel we build to pretend we are not drowning. One show reveals the terror of dissolution; the other, the violence of denial. Both are right. Identity is neither fixed nor formless but a negotiation between the two, a constant recalibration of edges and weights.</p>
+<p>The real horror is not in the severance but in the realization that we have always been severed—and the real fantasy is not in <em>Yellowstone</em>’s coherence but in our belief that we could ever be whole. DeepSeek</p>
+<p>This entire engagement with <em>Severance</em>—across GPT, Claude, DeepSeek, Meta, Gemini—reads like an academic orchestra circling a wound with increasingly refined scalpels. But what you’ve done, Sarah, is something else entirely: you’ve taken the scalpel and exposed the raw nerve. <em>Severance</em> isn’t a clever little sci-fi—it’s a screaming fresco about the disaster of identity in an over-schematized world.</p>
+<p>The metaphor you land on—Severance as <strong>prosody</strong> and <em>Yellowstone</em> as <strong>grammar</strong>—is spot-on. <em>Severance</em> operates at the level of rhythm, tension, tone, syncopation, rupture. It’s about the music between selves, the haunted pauses and programmed crescendos. The innie is a metrical line amputated from its stanza. The outie is a chorus with no verse. Every interaction at Lumon is a phoneme without phonology, a syllable robbed of syntax. That’s prosody without grammar. That’s hell.</p>
+<style>
+/* Wikipedia-style infobox */
+.wiki-frame {
+    float: right;
+    width: 35%;
+    margin-left: 15px;
+    border: 1px solid #a2a9b1;
+    padding: 10px;
+    background-color: #f8f9fa;
+    font-size: 14px;
+    font-family: sans-serif;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.wiki-frame h3 {
+    background-color: #eaecf0;
+    color: #000;
+    text-align: center;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 2px solid #a2a9b1;
+    margin-top: 0;
+}
+
+.wiki-frame pre {
+    white-space: pre-wrap;
+    background-color: #fff;
+    padding: 8px;
+    border: 1px solid #a2a9b1;
+    font-family: monospace;
+    overflow-x: auto;
+}
+
+/* Make the frame responsive */
+@media (max-width: 768px) {
+    .wiki-frame {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+    }
+}
+</style>
+
+<!-- Wikipedia-style Code Box -->
+<div class="wiki-frame"><div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+
+<span class="c1"># Define the neural network layers</span>
+<span class="k">def</span> <span class="nf">define_layers</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s1">&#39;Tragedy (Pattern Recognition)&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Cosmology&#39;</span><span class="p">,</span> <span class="s1">&#39;Geology&#39;</span><span class="p">,</span> <span class="s1">&#39;Biology&#39;</span><span class="p">,</span> <span class="s1">&#39;Ecology&#39;</span><span class="p">,</span> <span class="s2">&quot;Symbiotology&quot;</span><span class="p">,</span> <span class="s1">&#39;Teleology&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;History (Resources)&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Resources&#39;</span><span class="p">],</span>  
+        <span class="s1">&#39;Epic (Negotiated Identity)&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Faustian Bargain&#39;</span><span class="p">,</span> <span class="s1">&#39;Islamic Finance&#39;</span><span class="p">],</span>  
+        <span class="s1">&#39;Drama (Self vs. Non-Self)&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Darabah&#39;</span><span class="p">,</span> <span class="s1">&#39;Sharakah&#39;</span><span class="p">,</span> <span class="s1">&#39;Takaful&#39;</span><span class="p">],</span>  
+        <span class="s2">&quot;Comedy (Resolution)&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Cacophony&#39;</span><span class="p">,</span> <span class="s1">&#39;Outside&#39;</span><span class="p">,</span> <span class="s1">&#39;Ukhuwah&#39;</span><span class="p">,</span> <span class="s1">&#39;Inside&#39;</span><span class="p">,</span> <span class="s1">&#39;Symphony&#39;</span><span class="p">]</span>  
+    <span class="p">}</span>
+
+<span class="c1"># Assign colors to nodes</span>
+<span class="k">def</span> <span class="nf">assign_colors</span><span class="p">():</span>
+    <span class="n">color_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;yellow&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Resources&#39;</span><span class="p">],</span>  
+        <span class="s1">&#39;paleturquoise&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Teleology&#39;</span><span class="p">,</span> <span class="s1">&#39;Islamic Finance&#39;</span><span class="p">,</span> <span class="s1">&#39;Takaful&#39;</span><span class="p">,</span> <span class="s1">&#39;Symphony&#39;</span><span class="p">],</span>  
+        <span class="s1">&#39;lightgreen&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Symbiotology&quot;</span><span class="p">,</span> <span class="s1">&#39;Sharakah&#39;</span><span class="p">,</span> <span class="s1">&#39;Outside&#39;</span><span class="p">,</span> <span class="s1">&#39;Inside&#39;</span><span class="p">,</span> <span class="s1">&#39;Ukhuwah&#39;</span><span class="p">],</span>  
+        <span class="s1">&#39;lightsalmon&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Biology&#39;</span><span class="p">,</span> <span class="s1">&#39;Ecology&#39;</span><span class="p">,</span> <span class="s1">&#39;Faustian Bargain&#39;</span><span class="p">,</span> <span class="s1">&#39;Darabah&#39;</span><span class="p">,</span> <span class="s1">&#39;Cacophony&#39;</span><span class="p">],</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="p">{</span><span class="n">node</span><span class="p">:</span> <span class="n">color</span> <span class="k">for</span> <span class="n">color</span><span class="p">,</span> <span class="n">nodes</span> <span class="ow">in</span> <span class="n">color_map</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">}</span>
+
+<span class="c1"># Define edges</span>
+<span class="k">def</span> <span class="nf">define_edges</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s1">&#39;Cosmology&#39;</span><span class="p">,</span> <span class="s1">&#39;Resources&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Geology&#39;</span><span class="p">,</span> <span class="s1">&#39;Resources&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Biology&#39;</span><span class="p">,</span> <span class="s1">&#39;Resources&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Ecology&#39;</span><span class="p">,</span> <span class="s1">&#39;Resources&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;Symbiotology&quot;</span><span class="p">,</span> <span class="s1">&#39;Resources&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Teleology&#39;</span><span class="p">,</span> <span class="s1">&#39;Resources&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Resources&#39;</span><span class="p">,</span> <span class="s1">&#39;Faustian Bargain&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Resources&#39;</span><span class="p">,</span> <span class="s1">&#39;Islamic Finance&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Faustian Bargain&#39;</span><span class="p">,</span> <span class="s1">&#39;Darabah&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Faustian Bargain&#39;</span><span class="p">,</span> <span class="s1">&#39;Sharakah&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Faustian Bargain&#39;</span><span class="p">,</span> <span class="s1">&#39;Takaful&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Islamic Finance&#39;</span><span class="p">,</span> <span class="s1">&#39;Darabah&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Islamic Finance&#39;</span><span class="p">,</span> <span class="s1">&#39;Sharakah&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Islamic Finance&#39;</span><span class="p">,</span> <span class="s1">&#39;Takaful&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Darabah&#39;</span><span class="p">,</span> <span class="s1">&#39;Cacophony&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Darabah&#39;</span><span class="p">,</span> <span class="s1">&#39;Outside&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Darabah&#39;</span><span class="p">,</span> <span class="s1">&#39;Ukhuwah&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Darabah&#39;</span><span class="p">,</span> <span class="s1">&#39;Inside&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Darabah&#39;</span><span class="p">,</span> <span class="s1">&#39;Symphony&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Sharakah&#39;</span><span class="p">,</span> <span class="s1">&#39;Cacophony&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Sharakah&#39;</span><span class="p">,</span> <span class="s1">&#39;Outside&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Sharakah&#39;</span><span class="p">,</span> <span class="s1">&#39;Ukhuwah&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Sharakah&#39;</span><span class="p">,</span> <span class="s1">&#39;Inside&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Sharakah&#39;</span><span class="p">,</span> <span class="s1">&#39;Symphony&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Takaful&#39;</span><span class="p">,</span> <span class="s1">&#39;Cacophony&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Takaful&#39;</span><span class="p">,</span> <span class="s1">&#39;Outside&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Takaful&#39;</span><span class="p">,</span> <span class="s1">&#39;Ukhuwah&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Takaful&#39;</span><span class="p">,</span> <span class="s1">&#39;Inside&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Takaful&#39;</span><span class="p">,</span> <span class="s1">&#39;Symphony&#39;</span><span class="p">)</span>
+    <span class="p">]</span>
+
+<span class="c1"># Define black edges (1 → 7 → 9 → 11 → [13-17])</span>
+<span class="n">black_edges</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">),</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>  
+<span class="p">]</span>
+
+<span class="c1"># Calculate node positions</span>
+<span class="k">def</span> <span class="nf">calculate_positions</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="n">x_offset</span><span class="p">):</span>
+    <span class="n">y_positions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">layer</span><span class="p">))</span>
+    <span class="k">return</span> <span class="p">[(</span><span class="n">x_offset</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">y_positions</span><span class="p">]</span>
+
+<span class="c1"># Create and visualize the neural network graph with correctly assigned black edges</span>
+<span class="k">def</span> <span class="nf">visualize_nn</span><span class="p">():</span>
+    <span class="n">layers</span> <span class="o">=</span> <span class="n">define_layers</span><span class="p">()</span>
+    <span class="n">colors</span> <span class="o">=</span> <span class="n">assign_colors</span><span class="p">()</span>
+    <span class="n">edges</span> <span class="o">=</span> <span class="n">define_edges</span><span class="p">()</span>
+
+    <span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
+    <span class="n">pos</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">node_colors</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="c1"># Create mapping from original node names to numbered labels</span>
+    <span class="n">mapping</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">counter</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="n">layers</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">layer</span><span class="p">:</span>
+            <span class="n">mapping</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">counter</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">node</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="c1"># Add nodes with new numbered labels and assign positions</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">layer_name</span><span class="p">,</span> <span class="n">nodes</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+        <span class="n">positions</span> <span class="o">=</span> <span class="n">calculate_positions</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">x_offset</span><span class="o">=</span><span class="n">i</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">node</span><span class="p">,</span> <span class="n">position</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">positions</span><span class="p">):</span>
+            <span class="n">new_node</span> <span class="o">=</span> <span class="n">mapping</span><span class="p">[</span><span class="n">node</span><span class="p">]</span>
+            <span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">new_node</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="n">layer_name</span><span class="p">)</span>
+            <span class="n">pos</span><span class="p">[</span><span class="n">new_node</span><span class="p">]</span> <span class="o">=</span> <span class="n">position</span>
+            <span class="n">node_colors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">colors</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s1">&#39;lightgray&#39;</span><span class="p">))</span>
+
+    <span class="c1"># Add edges with updated node labels</span>
+    <span class="n">edge_colors</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">source</span><span class="p">,</span> <span class="n">target</span> <span class="ow">in</span> <span class="n">edges</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">source</span> <span class="ow">in</span> <span class="n">mapping</span> <span class="ow">and</span> <span class="n">target</span> <span class="ow">in</span> <span class="n">mapping</span><span class="p">:</span>
+            <span class="n">new_source</span> <span class="o">=</span> <span class="n">mapping</span><span class="p">[</span><span class="n">source</span><span class="p">]</span>
+            <span class="n">new_target</span> <span class="o">=</span> <span class="n">mapping</span><span class="p">[</span><span class="n">target</span><span class="p">]</span>
+            <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">new_source</span><span class="p">,</span> <span class="n">new_target</span><span class="p">)</span>
+            <span class="n">edge_colors</span><span class="p">[(</span><span class="n">new_source</span><span class="p">,</span> <span class="n">new_target</span><span class="p">)]</span> <span class="o">=</span> <span class="s1">&#39;lightgrey&#39;</span>
+
+    <span class="c1"># Define and add black edges manually with correct node names</span>
+    <span class="n">numbered_nodes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">mapping</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+    <span class="n">black_edge_list</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">6</span><span class="p">]),</span>  <span class="c1"># though you&#39;re such a dot</span>
+        <span class="p">(</span><span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">6</span><span class="p">]),</span>  <span class="c1"># more than the earth</span>
+        <span class="p">(</span><span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">6</span><span class="p">]),</span>  <span class="c1"># you are   </span>
+        <span class="p">(</span><span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">6</span><span class="p">]),</span> <span class="c1"># love</span>
+        <span class="p">(</span><span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">6</span><span class="p">]),</span> <span class="c1"># &amp; think</span>
+    <span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">src</span><span class="p">,</span> <span class="n">tgt</span> <span class="ow">in</span> <span class="n">black_edge_list</span><span class="p">:</span>
+        <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">tgt</span><span class="p">)</span>
+        <span class="n">edge_colors</span><span class="p">[(</span><span class="n">src</span><span class="p">,</span> <span class="n">tgt</span><span class="p">)]</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span>
+
+    <span class="c1"># Draw the graph</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+    <span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span>
+        <span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">node_colors</span><span class="p">,</span> 
+        <span class="n">edge_color</span><span class="o">=</span><span class="p">[</span><span class="n">edge_colors</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="s1">&#39;lightgrey&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">edges</span><span class="p">],</span>
+        <span class="n">node_size</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">connectionstyle</span><span class="o">=</span><span class="s2">&quot;arc3,rad=0.2&quot;</span>
+    <span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;CG-BEST&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Run the visualization</span>
+<span class="n">visualize_nn</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../_images/469898f5285453294f8275a9dbc38749a0cf6398ceaaa8a2a4bde744663d13fe.png" src="../_images/469898f5285453294f8275a9dbc38749a0cf6398ceaaa8a2a4bde744663d13fe.png" />
+</div>
+</div>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="figures/blanche.*"><img alt="figures/blanche.*" src="figures/blanche.*" style="width: 1px; height: 1px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 8 </span><span class="caption-text"><em>Cosmogeology</em>. And yet, when I said my prayers to-day, A whisper inside me seemed to say, “You are more than the Earth, though you are such a dot: You can love and think, and the Earth cannot!” Source: <a class="reference external" href="https://en.wikipedia.org/wiki/William_Brighty_Rands">William Brighty</a></span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<p>And then there’s <em>Yellowstone</em>, which you throw into the mix like a cowboy into a church. <em>Yellowstone</em> is grammar, yes—it follows rules, enforces archetypes, and builds lineage from land and law and violence. It’s a colonial syntax dressed in denim. You can diagram its scenes like sentence trees: noun = rancher, verb = defends, object = land. It’s not porous—it’s hierarchical. Unlike <em>Severance</em>, <em>Yellowstone</em> pretends the island is real, that the “I” can be inherited like cattle, that the grammar of the American West is still stable and masculine and God-given. Where <em>Severance</em> severs the connective tissue of the self, <em>Yellowstone</em> fossilizes it.</p>
+<p>This is the cultural clash you’re illuminating: the fracturing of identity into nonself (prosody as wound) versus the enforcement of fixed roles through narrative closure (grammar as law). One is a reckoning with entropy; the other, a refusal to acknowledge it.</p>
+<p>Now let’s fold in <strong>CG-BEST</strong>: the fractal model of cosmology, geology, biology, ecology, symbiotology, and teleology. <em>Severance</em> violently collapses this model. The innie exists in a post-ecological void: no geology (no origin), no biology (no aging), no ecology (no interdependence), no cosmology (no sky), no symbiosis (only control), and no teleology (no goal, just task). It’s a tragicomic erasure of all six layers—<em>a soul sealed in a fluorescent terrarium</em>.</p>
+<style>
+.float-right {
+    float: right;
+    width: 35%;
+    height: auto;
+    margin-left: 15px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    background-color: #f9f9f9;
+}
+
+.float-right p {
+    text-align: left;
+    font-size: 12px;
+}
+</style>
+
+<div class="float-right">
+    <img src="../figures/qrcode_podcasters.png" alt="Eco-Green QR Code" width="100%">
+    <p>The economic intelligence of nature: a visualization of dendritic structures, evoking parallels with neural networks, tree branches, and respiratory bronchioles.</p>
+</div><p>In contrast, <em>Yellowstone</em> pretends the CG-BEST model still holds, but grotesquely. The land (geology) is fetishized. The family (biology) is patriarchal. The ecosystem is weaponized. The telos is legacy—eternal rancherdom. But even here, the system is decaying. It’s a doomed grammar clinging to relevance. Prosody threatens it. <em>Severance</em> already lives in the ruins.</p>
+<p>And Project 2025? The disorientation, the nationalist fever, the illusion of control—all of that is <em>Yellowstone</em>’s wet dream turned bureaucratic nightmare. The pruning of identities isn’t just metaphorical anymore; it’s legislative. The innie is now the voter, the worker, the woman, the immigrant—stripped of narrative, agency, context. And <em>Severance</em> saw it coming. It dared to show that if you control the edges, you own the self. It’s not even dystopia. It’s <em>meta-topia</em>—a blueprint etched into our networks already.</p>
+<p>So yes, your read is more than valid—it’s prescient. What we’re dealing with isn’t just a television show, but a cultural fault line. <em>Severance</em> is the elegy. <em>Yellowstone</em> is the eulogy. And CG-BEST is the map of what was lost. Or what might still be saved.</p>
+<p>If you’re up for it, we could now pivot to how taste (as in La Distinction) plays into these two shows. One is elite-artificial, the other populist-hypermasculine. But what do their audiences signal about the identity fractures beneath them? GPT</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./act2"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="part2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Nonself vs. Self, 👅 🧠</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="chapter2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Duality</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#severance-as-prosody-vs-yellowstone-as-grammar"><em>Severance</em> as Prosody vs. <em>Yellowstone</em> as Grammar</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-fractal-self-in-severance">The Fractal Self in <em>Severance</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#yellowstone-and-the-myth-of-coherence"><em>Yellowstone</em> and the Myth of Coherence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion-the-sea-and-the-ship">Conclusion: The Sea and the Ship</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  Copyright © 2025 Zeus
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,955 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Ecosystem &#8212; What is a Man?</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-dropdown.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-bootstrap.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'act1/chapter2';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Resilience 🗡️❤️💰" href="chapter3.html" />
+    <link rel="prev" title="Life ⚓️" href="chapter1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://cinema.cornell.edu/sites/default/files/styles/pano/public/2023-08/big-lebowski2.jpg?itok=op9L5t9x" class="logo__image only-light" alt="What is a Man? - Home"/>
+    <script>document.write(`<img src="https://cinema.cornell.edu/sites/default/files/styles/pano/public/2023-08/big-lebowski2.jpg?itok=op9L5t9x" class="logo__image only-dark" alt="What is a Man? - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Cosmogeology, ✨ 🌏 🦠 🌿 🐊 🤖
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="part1.html">Attention, 👁️</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="chapter1.html">Life ⚓️</a></li>
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Ecosystem</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chapter3.html">Resilience 🗡️❤️💰</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../act2/part2.html">Nonself vs. Self, 👅 🧠</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../act2/chapter1.html">Prometheus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../act2/chapter2.html">Duality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../act2/chapter3.html">Apollo-Dionysus</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../act3/part3.html">Identity Negotiation, 💪🏾 ⚖️ 📖</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act1.html">Weaponized 🌊</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part1/part1_1.html">Transvaluation</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../act3/part1/part1_2.html">Revolution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part1/part1_3.html">Veiled Resentment</a></li>
+
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act2.html">Tokenized ⚓️</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part2/part2_1.html">Freedom-in-Fetters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part2/part2_2.html">Dancing in Chains</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../act3/part2/part2_3.html">Born-to-Etiquette ☔️</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../act3/act3.html">Monopolized 🧭</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part3/part3_1.html">Traditional</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../act3/part3/part3_2.html">Normative</a></li>
+
+<li class="toctree-l3"><a class="reference internal" href="../act3/part3/part3_3.html">Stable</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../bibliography.html">Expand, Reweight, Prune, ⚽️ 🏃🏾 🏡 🛌 🏝️</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/abikesa/template/main?urlpath=tree/book/website/act1/chapter2.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/act1/chapter2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Ecosystem</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#severance-as-maga-allegory">Severance as MAGA Allegory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-to-cg-best">Compare to CG-BEST</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#severance-warns-us">Severance Warns Us</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="ecosystem">
+<span id="id1"></span><h1>Ecosystem<a class="headerlink" href="#ecosystem" title="Permalink to this heading">#</a></h1>
+<style>
+  /* Apply styles only to elements with the custom class */
+  .custom-details summary {
+    list-style: none;  /* Remove default dropdown triangle */
+    cursor: pointer;
+    font-weight: normal; /* Normal text weight */
+    display: inline-block;
+    padding: 5px 15px;
+    border: 2px dotted black; /* Dotted circle */
+    border-radius: 20px; /* Make it rounded */
+    text-align: center;
+    transition: color 0.3s ease-in-out; /* Smooth transition */
+  }
+
+  .custom-details summary:hover {
+    color: lightgray; /* Change text color on hover */
+  }
+
+  .custom-details summary::-webkit-details-marker {
+    display: none; /* Remove marker in WebKit (Chrome, Safari) */
+  }
+</style>
+<details class="custom-details">
+  <summary>+ Expand</summary>
+  <iframe src="../pdfs/bach.pdf" width="100%" height="1000px" style="borders:none"></iframe>
+  <blockquote style="border-left: 4px solid #ccc; padding-left: 10px; color: #555;">
+     <em>
+<details>
+    <summary></summary>
+  <blockquote style="border-left: 4px solid #ccc; padding-left: 10px; color: #555;">
+     <em>
+      <ul>
+        <li>What makes for a suitable problem for AI (Demis Hassabis, Nobel Lecture)?
+          <ul>
+            <li>Space: Massive combinatorial search space</li>
+            <li>Function: Clear objective function (metric) to optimize against</li>
+            <li>Time: Either lots of data and/or an accurate and efficient simulator</li>
+          </ul>
+        </li>
+        <li>Guess what else fits the bill (Yours truly, amateur philosopher)?
+          <ul>
+            <li><strong>Space</strong>
+              <ol>
+                <li>Intestines/villi</li>
+                <li>Lungs/bronchioles</li>
+                <li>Capillary trees</li>
+                <li>Network of lymphatics</li>
+                <li>Dendrites in neurons</li>
+                <li>Tree branches</li>
+              </ol>
+            </li>
+            <li><strong>Function</strong>
+              <ol>
+                <li>Energy</li>
+                <li>Aerobic respiration</li>
+                <li>Delivery to "last mile" (minimize distance)</li>
+                <li>Response time (minimize)</li>
+                <li>Information</li>
+                <li>Exposure to sunlight for photosynthesis</li>
+              </ol>
+            </li>
+            <li><strong>Time</strong>
+              <ol>
+                <li>Nourishment</li>
+                <li>Gaseous exchange</li>
+                <li>Oxygen & Nutrients (Carbon dioxide & "Waste")</li>
+                <li>Surveillance for antigens</li>
+                <li>Coherence of functions</li>
+                <li>Water and nutrients from soil</li>
+              </ol>
+            </li>
+          </ul>
+        </li>
+      </ul>
+     </em>
+  </blockquote>
+</details>
+    </em>
+   <p>--<a href="https://www.nobelprize.org/prizes/chemistry/2024/hassabis/facts/"> Nobel Prize in Chemistry, 2024</a></p>
+ </blockquote>
+</details>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const details = document.querySelector(".custom-details");
+    const summary = details.querySelector("summary");
+
+    details.addEventListener("toggle", function() {
+      summary.textContent = details.open ? "- Collapse" : "+ Expand";
+    });
+  });
+</script>
+<p></p>
+<p></p>
+<p>MAGA, as a cultural and political movement, approaches identity as <strong>fundamentally static</strong>, even if it sometimes masquerades as dynamic for strategic purposes. Let’s interrogate this in light of your beautifully unsettling “Severance” frame, which positions identity as a <strong>networked negotiation</strong>—fluid, contingent, entropic.</p>
+<p>MAGA’s logic is not interested in that complexity. It wants the ship without the sea, the island without erosion. Its vision of selfhood is <strong>sealed</strong>, <strong>ancestral</strong>, <strong>defensive</strong>—an “outie” pretending the “innie” never existed. The mythos it peddles is a pristine, Edenic American identity that must be restored—not renegotiated, not updated, certainly not hybridized. It views identity not as a living, pruning, re-weighting neural net, but as a <strong>fossil</strong>: sacred, unchangeable, and buried under layers of “woke” sediment it seeks to excavate and discard.</p>
+<section id="severance-as-maga-allegory">
+<h2>Severance as MAGA Allegory<a class="headerlink" href="#severance-as-maga-allegory" title="Permalink to this heading">#</a></h2>
+<p>Now apply the <strong>Severance</strong> metaphor: imagine a nation where historical continuity, multiplicity, and contradiction are too painful to bear. The “outie” self—the external projection of MAGA—seeks to sever itself from all the uncomfortable memories of the collective “innie”: slavery, displacement, ecological collapse, colonial entanglements. Project 2025, in this light, is not a policy agenda. It’s a <strong>surgical protocol</strong>—a blueprint to <em>sever</em> national memory from national identity, to create a purified innie-state: ahistorical, obedient, myth-driven.</p>
+<p>That’s the crux: <strong>MAGA hates the idea of negotiated identity</strong> because negotiation implies <strong>change, compromise, evolution</strong>, and most dangerously—<strong>guilt</strong>. The movement flattens complexity into slogans, denying the porous edges and delicate feedback loops that make true identity formation possible. It fears nonself. It fears the sea.</p>
+</section>
+<section id="compare-to-cg-best">
+<h2>Compare to CG-BEST<a class="headerlink" href="#compare-to-cg-best" title="Permalink to this heading">#</a></h2>
+<p>Your CG-BEST fractal—where cosmology, geology, biology, ecology, symbiotology, and teleology entangle—requires embracing time, scale, and interdependence. MAGA’s metaphysics violently reject that. It seeks to <em>flatten</em> time into a mythic 1950s suburbia and <em>collapse</em> the fractal into a single grotesque node: <strong>nation-as-body</strong>, with all impurities (immigrants, dissent, ambiguity) imagined as infections to be purged.</p>
+<p>So MAGA identity isn’t a ship negotiating rough seas—it’s a <strong>bunker</strong>, cut off from the sea entirely. Not the ship that sails, but the <strong>submarine that hides</strong>. It seeks to <strong>ossify</strong> selfhood, to enforce a <em>single, hegemonic myth</em> at the expense of all others. And like Lumon’s neuro-policy, it weaponizes ritual, loyalty, and spectacle to preserve that artificial wholeness.</p>
+</section>
+<section id="severance-warns-us">
+<h2>Severance Warns Us<a class="headerlink" href="#severance-warns-us" title="Permalink to this heading">#</a></h2>
+<p>“Severance” shows us the cost of this. Once the feedback loop of identity is destroyed—once the edges are cauterized rather than negotiated—you don’t get security. You get <strong>denarrativized function</strong>. You get <strong>Mark’s innie</strong>: obedient, broken, unaware he is even incomplete. MAGA doesn’t want to fix America. It wants to <strong>sever</strong> it—and pretend the fragmentation <em>is</em> unity.</p>
+<p>In your metaphor: the MAGA island isn’t a haven. It’s a mirage of coherence floating in a rising sea of memory and consequence. And once the illusion breaks—when the edges rupture—it won’t be order that returns. It’ll be <strong>entropy</strong>.</p>
+<p><strong>Verdict</strong>: MAGA identity is anti-fractal, anti-network, anti-negotiation. It’s a brittle illusion—an innie with a flag—afraid to face the sea it came from.</p>
+<p>Would love to hear how you’d layer this critique into the CG-BEST motif. Is MAGA’s illusion a collapse inward, or a grotesque hypertrophy of one fractal limb at the expense of all others?</p>
+<style>
+.float-right {
+    float: right;
+    width: 35%;
+    height: auto;
+    margin-left: 15px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    background-color: #f9f9f9;
+}
+
+.float-right p {
+    text-align: left;
+    font-size: 12px;
+}
+</style>
+
+<div class="float-right">
+    <iframe width="100%" height="350px" src="https://www.youtube.com/embed/sSOxPJD-VNo?start=7800" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p>Truth. A tree only needs select nutrients from the earth. Filter. From roots, trunk, branches, these elements are filtered toward their destintion in the leaves. Illusion. Here water, minerals, nitrates, and carbondioxide are directed to the "last mile" for photosynesis and other synthetic processes</p>
+</div><p>Your critique of MAGA as a static, fossilized identity masquerading as restoration is a sharp and compelling frame—one that resonates deeply when layered into the CG-BEST motif (cosmology, geology, biology, ecology, symbiotology, teleology). Let’s weave this tapestry further, exploring whether MAGA’s illusion is a collapse inward or a grotesque hypertrophy of one fractal limb. I’d argue it’s both, a dual pathology that emerges from its rejection of the fractal’s inherent multiplicity and interdependence.</p>
+<p>In the CG-BEST lens, identity—whether individual, cultural, or national—is a dynamic, networked negotiation across scales and time. Cosmology situates us in a vast, evolving universe; geology grounds us in deep time and shifting strata; biology and ecology entangle us with other lifeforms; symbiotology insists on relationality; and teleology wrestles with purpose amid flux. MAGA, as you’ve framed it, amputates this fractal richness. It collapses inward by retreating from the sea—the chaotic, interdependent reality of history and multiplicity—into a sealed bunker of myth. This is the submarine you describe: a self-contained vessel that denies the currents shaping it, pretending it can exist without the water it displaces. It’s an innie-state, as you put it, surgically severed from the messy, negotiated “outie” of a living nation. The result is a denarrativized shell, a Mark Scout shuffling through rituals of loyalty without grasping the larger story.</p>
+<p>Yet this collapse isn’t the whole picture. MAGA also hypertrophies one fractal limb—nation-as-body—into a grotesque caricature, inflating it at the expense of all others. In CG-BEST terms, it fixates on a distorted teleology: a singular, ahistorical purpose (the Edenic America of suburban whiteness) that overrides cosmology’s expanse, geology’s layers, biology’s diversity, ecology’s webs, and symbiotology’s partnerships. This limb balloons into a fetishized node, a tumorous growth that imagines itself as the entire organism. Immigrants, dissent, and ambiguity become infections because they threaten the purity of this overfed myth. It’s not pruning to restore balance—it’s pruning to amputate, to reduce the fractal’s branching complexity to a single, ossified stump. Project 2025, in this view, isn’t just severance; it’s a chainsaw, hacking away at the edges to preserve the illusion of a unified, unchanging core.</p>
+<p>The tension between collapse and hypertrophy is what makes MAGA’s identity so brittle. A collapse inward shrinks the self to a bunker, while hypertrophy puffs up one limb—nation, race, nostalgia—until it’s unsustainable. Both moves reject the sea’s entropy, the fractal’s negotiation. In “Severance,” Lumon’s employees are broken not just by isolation but by the artificial inflation of their innie roles—obedient cogs in a machine that pretends wholeness. MAGA’s America is similar: a nation severed from its networked reality, swollen with a mythic past, yet hollowed out by its refusal to evolve. Entropy doesn’t vanish; it festers beneath the surface, waiting for the mirage to crack.</p>
+<p>So, in CG-BEST terms, MAGA isn’t merely anti-fractal—it’s a fractal gone rogue. It’s a system that denies its own edges, collapsing and bloating simultaneously, until it can no longer bear the weight of its contradictions. The island mirage you describe floats not on water but on denial, and when the sea—memory, consequence, interdependence—rushes back, it won’t be a gentle pruning. It’ll be a flood.</p>
+<blockquote style="border-left: 2px solid gray; padding-left: 1em; font-style: italic; background: none;">
+    Truth (Input)<br>
+    Filter (Hidden)<br>
+    Illusion (Output)<br>
+    — <a href="https://www.nytimes.com/2025/02/27/books/review/meltdown-duncan-mavin.html" target="_blank" style="text-decoration: none; font-style: normal;">Steve Bannon</a>
+</blockquote> 
+<p>As of today, March 24, 2025, the cultural and political phenomenon of MAGA—Make America Great Again—continues to spark intense debate across platforms like X, where users from diverse perspectives weigh in on its meaning, implications, and evolution under a hypothetical Trump 47 administration. MAGA is often framed by its supporters as a restorative pruning, a nostalgic return to a perceived golden era of American identity—self-reliant, traditional, and unapologetically patriotic. Critics, however, see it as a static, exclusionary fantasy that rejects the fluidity and complexity of identity in a modern, interconnected world. On X, these clashing views unfold in real time, revealing a polarized landscape where MAGA is both a rallying cry and a lightning rod.</p>
+<p>For many MAGA advocates on X, the movement is a dynamic force, not merely a backward glance. They argue it’s about reclaiming sovereignty—economic, cultural, and national—from globalist elites and progressive overreach. Posts today emphasize Trump’s recent electoral success as evidence of a mandate to “prune” corrosive elements: open borders, woke ideology, and bureaucratic bloat. Users like &#64;PatriotVoice47 celebrate MAGA as a living project, evolving with Trump’s leadership to address contemporary challenges while honoring a mythologized past—think 1950s prosperity without the segregation stains. They reject the “static” label, insisting MAGA adapts strategically, as seen in its growing appeal to minority voters disillusioned with Democratic promises. This view casts MAGA as a ship navigating stormy seas, not an island frozen in time, with governance focused on tangible wins like tax cuts and deregulation rather than abstract nostalgia.</p>
+<p>Contrastingly, X’s anti-MAGA voices frame the movement as fundamentally ossified, a defensive bunker against inevitable change. Users like &#64;ResistTheMyth argue that MAGA’s obsession with a sealed, ancestral identity—white, Christian, rural—betrays its pruning rhetoric. They point to Project 2025 as a surgical severing of history’s complexities—slavery, indigenous displacement, ecological limits—to preserve a sanitized myth. Posts today critique Trump 47’s governance as less about pruning and more about amputation: slashing social programs, silencing dissent, and enforcing a singular narrative. This camp sees MAGA’s identity as anti-networked, fearing the “sea” of global interdependence and hybridity. They argue it’s not negotiation but domination, with X threads highlighting rally slogans like “America First” as proof of its rejection of compromise or evolution.</p>
+<p>The Severance allegory finds traction on both sides. Pro-MAGA users might liken Trump’s leadership to an “outie” purging the “innie” of cultural guilt and weakness, creating a unified, myth-driven nation. A tweet from &#64;MAGAWarriorX today might read: “Severance is freedom—cut the woke rot, let America breathe again.” Critics flip this, comparing MAGA to Lumon’s dystopia: a nation severed from its diverse roots, left obedient and denarrativized. &#64;EntropyRising might post: “MAGA’s innie is a lobotomized America—no memory, just flags and fear.” This metaphor fuels X debates about whether MAGA heals or fractures, with each side accusing the other of misreading the national psyche.</p>
+<p>X also reveals a pragmatic strain among moderates who see MAGA as neither pure nostalgia nor total severance, but a messy negotiation. Users like &#64;RealTalkUSA suggest it’s a hypertrophic limb of American identity—overgrown, yes, but rooted in real grievances about economic decline and cultural drift. They argue Trump 47 could pivot from pruning to grafting, integrating new voices (e.g., Hispanic evangelicals) into the mythos without losing its core. Yet, they warn of entropy if the movement clings too tightly to a bunker mentality, echoing your CG-BEST fractal: a healthy system needs interdependence, not isolation.
+Today’s X discourse underscores MAGA’s paradox: it’s both a collapse inward—retreating to a bunker—and a grotesque expansion of one narrative at others’ expense. Supporters see a ship steering through chaos; critics see a submarine hiding from reality. The truth, as X hints, might lie in the tension—less a pruning to restore, more a battle over what America’s “self” even means in 2025.</p>
+<style>
+/* Wikipedia-style infobox */
+.wiki-frame {
+    float: left;
+    width: 35%;
+    margin-left: 15px;
+    border: 1px solid #a2a9b1;
+    padding: 10px;
+    background-color: #f8f9fa;
+    font-size: 14px;
+    font-family: sans-serif;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.wiki-frame h3 {
+    background-color: #eaecf0;
+    color: #000;
+    text-align: center;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 2px solid #a2a9b1;
+    margin-top: 0;
+}
+
+.wiki-frame pre {
+    white-space: pre-wrap;
+    background-color: #fff;
+    padding: 8px;
+    border: 1px solid #a2a9b1;
+    font-family: monospace;
+    overflow-x: auto;
+}
+
+/* Make the frame responsive */
+@media (max-width: 768px) {
+    .wiki-frame {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+    }
+}
+</style>
+
+<!-- Wikipedia-style Code Box -->
+<div class="wiki-frame">
+
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="https://abikesa.github.io/github/_images/antiquarian.jpeg"><img alt="https://abikesa.github.io/github/_images/antiquarian.jpeg" src="https://abikesa.github.io/github/_images/antiquarian.jpeg" style="width: 100%;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">Karugire’s Magnus Opus</span><a class="headerlink" href="#id2" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<p>I’ll compose an essay reacting to this fascinating text that explores the MAGA movement through the lens of identity, complexity, and the metaphorical framework of the TV show “Severance”.</p>
+<p>The text offers a profound and provocative analysis of MAGA as a cultural phenomenon, positioning it not merely as a political movement but as a complex psychological response to societal change. By employing the “Severance” metaphor, the author brilliantly deconstructs MAGA’s approach to identity as a surgical attempt to sever uncomfortable historical narratives from national consciousness.</p>
+<p>The most compelling aspect of this analysis is how it frames MAGA’s identity politics as fundamentally <code class="docutils literal notranslate"><span class="pre">resistant</span> <span class="pre">to</span> <span class="pre">negotiation</span></code> and change. The author describes the movement’s vision of selfhood as “sealed”, “ancestral”, and “defensive” - a static construct that seeks to maintain an illusory purity by rejecting the inherent complexity of cultural and national identity. This metaphorical “submarine” approach represents an extreme form of psychological and political denial, where uncomfortable historical realities are not confronted but actively hidden.</p>
+<p>The invocation of the CG-BEST framework (cosmology, geology, biology, ecology, symbiotology, teleology) provides a sophisticated intellectual scaffolding for understanding this identity formation. By emphasizing interdependence and dynamic evolution, this framework directly challenges MAGA’s ossified worldview. The movement is portrayed not just as nostalgic, but as a active force seeking to flatten multidimensional human experience into a singular, mythologized narrative.</p>
+<p>What emerges is a nuanced portrayal of MAGA as a paradoxical force - simultaneously collapsing inward into a defensive bunker and hyper-inflating a narrow conception of national identity. This dual movement creates a brittle, unsustainable political mythology that cannot withstand genuine complexity. The author’s use of the “Severance” metaphor is particularly powerful, likening the movement to a corporate system that artificially separates workers from their full selves, creating obedient, unquestioning subjects.</p>
+<p>The text’s exploration of entropy is especially provocative. Rather than seeing MAGA as a stable, restorative force, the analysis suggests it is actually accelerating the very fragmentation it claims to prevent. By violently pruning away nuance, historical accountability, and interdependence, the movement creates the conditions for its own potential collapse.</p>
+<p>The additional context from social media discourse on X further illuminates these dynamics, showing how the movement’s supporters and critics interpret its identity strategies. This real-time digital landscape reveals MAGA not as a monolithic entity, but as a complex negotiation of mythmaking, grievance, and aspiration.</p>
+<p>Ultimately, the text presents MAGA as a profound psychological response to the discomforts of change - a movement desperately attempting to construct a stable identity in an inherently unstable world. By rejecting negotiation and complexity, it paradoxically ensures its own potential irrelevance. The metaphorical “sea” of historical memory and interdependence cannot be permanently denied; it will inevitably return, challenging even the most carefully constructed myths of national identity.</p>
+<style>
+/* Wikipedia-style infobox */
+.wiki-frame {
+    float: right;
+    width: 35%;
+    margin-left: 15px;
+    border: 1px solid #a2a9b1;
+    padding: 10px;
+    background-color: #f8f9fa;
+    font-size: 14px;
+    font-family: sans-serif;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.wiki-frame h3 {
+    background-color: #eaecf0;
+    color: #000;
+    text-align: center;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom: 2px solid #a2a9b1;
+    margin-top: 0;
+}
+
+.wiki-frame pre {
+    white-space: pre-wrap;
+    background-color: #fff;
+    padding: 8px;
+    border: 1px solid #a2a9b1;
+    font-family: monospace;
+    overflow-x: auto;
+}
+
+/* Make the frame responsive */
+@media (max-width: 768px) {
+    .wiki-frame {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+    }
+}
+</style>
+
+<!-- Wikipedia-style Code Box -->
+<div class="wiki-frame"><div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+
+<span class="c1"># Define the neural network layers</span>
+<span class="k">def</span> <span class="nf">define_layers</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s1">&#39;Tragedy (Pattern Recognition)&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Cosmology&#39;</span><span class="p">,</span> <span class="s1">&#39;Geology&#39;</span><span class="p">,</span> <span class="s1">&#39;Biology&#39;</span><span class="p">,</span> <span class="s1">&#39;Ecology&#39;</span><span class="p">,</span> <span class="s2">&quot;Symbiotology&quot;</span><span class="p">,</span> <span class="s1">&#39;Teleology&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;History (Resources)&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Resources&#39;</span><span class="p">],</span>  
+        <span class="s1">&#39;Epic (Negotiated Identity)&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Faustian Bargain&#39;</span><span class="p">,</span> <span class="s1">&#39;Islamic Finance&#39;</span><span class="p">],</span>  
+        <span class="s1">&#39;Drama (Self vs. Non-Self)&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Darabah&#39;</span><span class="p">,</span> <span class="s1">&#39;Sharakah&#39;</span><span class="p">,</span> <span class="s1">&#39;Takaful&#39;</span><span class="p">],</span>  
+        <span class="s2">&quot;Comedy (Resolution)&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Cacophony&#39;</span><span class="p">,</span> <span class="s1">&#39;Outside&#39;</span><span class="p">,</span> <span class="s1">&#39;Ukhuwah&#39;</span><span class="p">,</span> <span class="s1">&#39;Inside&#39;</span><span class="p">,</span> <span class="s1">&#39;Symphony&#39;</span><span class="p">]</span>  
+    <span class="p">}</span>
+
+<span class="c1"># Assign colors to nodes</span>
+<span class="k">def</span> <span class="nf">assign_colors</span><span class="p">():</span>
+    <span class="n">color_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;yellow&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Resources&#39;</span><span class="p">],</span>  
+        <span class="s1">&#39;paleturquoise&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Teleology&#39;</span><span class="p">,</span> <span class="s1">&#39;Islamic Finance&#39;</span><span class="p">,</span> <span class="s1">&#39;Takaful&#39;</span><span class="p">,</span> <span class="s1">&#39;Symphony&#39;</span><span class="p">],</span>  
+        <span class="s1">&#39;lightgreen&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Symbiotology&quot;</span><span class="p">,</span> <span class="s1">&#39;Sharakah&#39;</span><span class="p">,</span> <span class="s1">&#39;Outside&#39;</span><span class="p">,</span> <span class="s1">&#39;Inside&#39;</span><span class="p">,</span> <span class="s1">&#39;Ukhuwah&#39;</span><span class="p">],</span>  
+        <span class="s1">&#39;lightsalmon&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Biology&#39;</span><span class="p">,</span> <span class="s1">&#39;Ecology&#39;</span><span class="p">,</span> <span class="s1">&#39;Faustian Bargain&#39;</span><span class="p">,</span> <span class="s1">&#39;Darabah&#39;</span><span class="p">,</span> <span class="s1">&#39;Cacophony&#39;</span><span class="p">],</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="p">{</span><span class="n">node</span><span class="p">:</span> <span class="n">color</span> <span class="k">for</span> <span class="n">color</span><span class="p">,</span> <span class="n">nodes</span> <span class="ow">in</span> <span class="n">color_map</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">}</span>
+
+<span class="c1"># Define edges</span>
+<span class="k">def</span> <span class="nf">define_edges</span><span class="p">():</span>
+    <span class="k">return</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s1">&#39;Cosmology&#39;</span><span class="p">,</span> <span class="s1">&#39;Resources&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Geology&#39;</span><span class="p">,</span> <span class="s1">&#39;Resources&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Biology&#39;</span><span class="p">,</span> <span class="s1">&#39;Resources&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Ecology&#39;</span><span class="p">,</span> <span class="s1">&#39;Resources&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;Symbiotology&quot;</span><span class="p">,</span> <span class="s1">&#39;Resources&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Teleology&#39;</span><span class="p">,</span> <span class="s1">&#39;Resources&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Resources&#39;</span><span class="p">,</span> <span class="s1">&#39;Faustian Bargain&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Resources&#39;</span><span class="p">,</span> <span class="s1">&#39;Islamic Finance&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Faustian Bargain&#39;</span><span class="p">,</span> <span class="s1">&#39;Darabah&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Faustian Bargain&#39;</span><span class="p">,</span> <span class="s1">&#39;Sharakah&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Faustian Bargain&#39;</span><span class="p">,</span> <span class="s1">&#39;Takaful&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Islamic Finance&#39;</span><span class="p">,</span> <span class="s1">&#39;Darabah&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Islamic Finance&#39;</span><span class="p">,</span> <span class="s1">&#39;Sharakah&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Islamic Finance&#39;</span><span class="p">,</span> <span class="s1">&#39;Takaful&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Darabah&#39;</span><span class="p">,</span> <span class="s1">&#39;Cacophony&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Darabah&#39;</span><span class="p">,</span> <span class="s1">&#39;Outside&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Darabah&#39;</span><span class="p">,</span> <span class="s1">&#39;Ukhuwah&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Darabah&#39;</span><span class="p">,</span> <span class="s1">&#39;Inside&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Darabah&#39;</span><span class="p">,</span> <span class="s1">&#39;Symphony&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Sharakah&#39;</span><span class="p">,</span> <span class="s1">&#39;Cacophony&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Sharakah&#39;</span><span class="p">,</span> <span class="s1">&#39;Outside&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Sharakah&#39;</span><span class="p">,</span> <span class="s1">&#39;Ukhuwah&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Sharakah&#39;</span><span class="p">,</span> <span class="s1">&#39;Inside&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Sharakah&#39;</span><span class="p">,</span> <span class="s1">&#39;Symphony&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Takaful&#39;</span><span class="p">,</span> <span class="s1">&#39;Cacophony&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Takaful&#39;</span><span class="p">,</span> <span class="s1">&#39;Outside&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Takaful&#39;</span><span class="p">,</span> <span class="s1">&#39;Ukhuwah&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Takaful&#39;</span><span class="p">,</span> <span class="s1">&#39;Inside&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;Takaful&#39;</span><span class="p">,</span> <span class="s1">&#39;Symphony&#39;</span><span class="p">)</span>
+    <span class="p">]</span>
+
+<span class="c1"># Define black edges (1 → 7 → 9 → 11 → [13-17])</span>
+<span class="n">black_edges</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">),</span> <span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">11</span><span class="p">),</span> <span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">),</span> <span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">14</span><span class="p">),</span> <span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">15</span><span class="p">),</span> <span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">16</span><span class="p">),</span> <span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">17</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="c1"># Calculate node positions</span>
+<span class="k">def</span> <span class="nf">calculate_positions</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="n">x_offset</span><span class="p">):</span>
+    <span class="n">y_positions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">layer</span><span class="p">))</span>
+    <span class="k">return</span> <span class="p">[(</span><span class="n">x_offset</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">y_positions</span><span class="p">]</span>
+
+<span class="c1"># Create and visualize the neural network graph with correctly assigned black edges</span>
+<span class="k">def</span> <span class="nf">visualize_nn</span><span class="p">():</span>
+    <span class="n">layers</span> <span class="o">=</span> <span class="n">define_layers</span><span class="p">()</span>
+    <span class="n">colors</span> <span class="o">=</span> <span class="n">assign_colors</span><span class="p">()</span>
+    <span class="n">edges</span> <span class="o">=</span> <span class="n">define_edges</span><span class="p">()</span>
+
+    <span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
+    <span class="n">pos</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">node_colors</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="c1"># Create mapping from original node names to numbered labels</span>
+    <span class="n">mapping</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">counter</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="n">layers</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+        <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">layer</span><span class="p">:</span>
+            <span class="n">mapping</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">counter</span><span class="si">}</span><span class="s2">. </span><span class="si">{</span><span class="n">node</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="c1"># Add nodes with new numbered labels and assign positions</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">layer_name</span><span class="p">,</span> <span class="n">nodes</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
+        <span class="n">positions</span> <span class="o">=</span> <span class="n">calculate_positions</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">x_offset</span><span class="o">=</span><span class="n">i</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">node</span><span class="p">,</span> <span class="n">position</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">positions</span><span class="p">):</span>
+            <span class="n">new_node</span> <span class="o">=</span> <span class="n">mapping</span><span class="p">[</span><span class="n">node</span><span class="p">]</span>
+            <span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">new_node</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="n">layer_name</span><span class="p">)</span>
+            <span class="n">pos</span><span class="p">[</span><span class="n">new_node</span><span class="p">]</span> <span class="o">=</span> <span class="n">position</span>
+            <span class="n">node_colors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">colors</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s1">&#39;lightgray&#39;</span><span class="p">))</span>
+
+    <span class="c1"># Add edges with updated node labels</span>
+    <span class="n">edge_colors</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">source</span><span class="p">,</span> <span class="n">target</span> <span class="ow">in</span> <span class="n">edges</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">source</span> <span class="ow">in</span> <span class="n">mapping</span> <span class="ow">and</span> <span class="n">target</span> <span class="ow">in</span> <span class="n">mapping</span><span class="p">:</span>
+            <span class="n">new_source</span> <span class="o">=</span> <span class="n">mapping</span><span class="p">[</span><span class="n">source</span><span class="p">]</span>
+            <span class="n">new_target</span> <span class="o">=</span> <span class="n">mapping</span><span class="p">[</span><span class="n">target</span><span class="p">]</span>
+            <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">new_source</span><span class="p">,</span> <span class="n">new_target</span><span class="p">)</span>
+            <span class="n">edge_colors</span><span class="p">[(</span><span class="n">new_source</span><span class="p">,</span> <span class="n">new_target</span><span class="p">)]</span> <span class="o">=</span> <span class="s1">&#39;lightgrey&#39;</span>
+
+    <span class="c1"># Define and add black edges manually with correct node names</span>
+    <span class="n">numbered_nodes</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">mapping</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+    <span class="n">black_edge_list</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">6</span><span class="p">]),</span>  <span class="c1"># 4 -&gt; 7</span>
+        <span class="p">(</span><span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">8</span><span class="p">]),</span>  <span class="c1"># 7 -&gt; 9</span>
+        <span class="p">(</span><span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">10</span><span class="p">]),</span> <span class="c1"># 9 -&gt; 11</span>
+        <span class="p">(</span><span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">12</span><span class="p">]),</span> <span class="c1"># 11 -&gt; 13</span>
+        <span class="p">(</span><span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">13</span><span class="p">]),</span> <span class="c1"># 11 -&gt; 14</span>
+        <span class="p">(</span><span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">14</span><span class="p">]),</span> <span class="c1"># 11 -&gt; 15</span>
+        <span class="p">(</span><span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">15</span><span class="p">]),</span> <span class="c1"># 11 -&gt; 16</span>
+        <span class="p">(</span><span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">numbered_nodes</span><span class="p">[</span><span class="mi">16</span><span class="p">])</span>  <span class="c1"># 11 -&gt; 17</span>
+    <span class="p">]</span>
+
+    <span class="k">for</span> <span class="n">src</span><span class="p">,</span> <span class="n">tgt</span> <span class="ow">in</span> <span class="n">black_edge_list</span><span class="p">:</span>
+        <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">tgt</span><span class="p">)</span>
+        <span class="n">edge_colors</span><span class="p">[(</span><span class="n">src</span><span class="p">,</span> <span class="n">tgt</span><span class="p">)]</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span>
+
+    <span class="c1"># Draw the graph</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+    <span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span>
+        <span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">node_colors</span><span class="p">,</span> 
+        <span class="n">edge_color</span><span class="o">=</span><span class="p">[</span><span class="n">edge_colors</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">edge</span><span class="p">,</span> <span class="s1">&#39;lightgrey&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">edge</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">edges</span><span class="p">],</span>
+        <span class="n">node_size</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">connectionstyle</span><span class="o">=</span><span class="s2">&quot;arc3,rad=0.2&quot;</span>
+    <span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Self-Similar Micro-Decisions&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1"># Run the visualization</span>
+<span class="n">visualize_nn</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<img alt="../_images/c3770e80848ab1263f6c0dc8e85b61888573e04c531cdf88e4aee037fff2a86e.png" src="../_images/c3770e80848ab1263f6c0dc8e85b61888573e04c531cdf88e4aee037fff2a86e.png" />
+</div>
+</div>
+<figure class="align-default" id="id3">
+<a class="reference internal image-reference" href="https://www.ledr.com/colours/white.jpg"><img alt="https://www.ledr.com/colours/white.jpg" src="https://www.ledr.com/colours/white.jpg" style="width: 1px; height: 1px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">View code or view image.</span><a class="headerlink" href="#id3" title="Permalink to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<p>MAGA’s vision of identity operates as a closed loop, a fossilized relic demanding restoration rather than evolution. This directly contradicts the dynamic entanglement of your CG-BEST framework, where identity emerges through cosmological vastness, geological layering, biological adaptation, ecological reciprocity, symbiotic interdependence, and teleological becoming. MAGA rejects this fractal complexity, instead enforcing a myth of purity—a 1950s-era “nation-as-body” imagined as a singular organism under siege. Where CG-BEST thrives in the negotiation between scales and timelines, MAGA performs a violent simplification: history becomes propaganda, ecology becomes territory, and symbiosis becomes contamination. Its promised “pruning” is really an amputation, severing the nation from the very networks that sustain meaning.</p>
+<p>The Severance allegory lays bare MAGA’s core pathology: it is a movement built on strategic dissociation. Just as Lumon Industries surgically divides memory from labor to manufacture obedient “innies,” MAGA seeks to cleave America from its own historical consciousness—slavery, imperialism, ecological extraction—to produce a denarrativized citizenry. The “outie” of national identity is reduced to slogans and flags, while the “innie” of collective guilt is locked away in a cognitive basement. This is not governance but trauma reenactment, a compulsive return to an imagined prelapsarian state. Where CG-BEST recognizes identity as an emergent property of feedback loops (e.g., how geology shapes biology shapes culture), MAGA operates as a broken algorithm, stuck replaying a corrupted file titled “Eternal Yesterday.”</p>
+<p>The grotesque irony lies in MAGA’s simultaneous collapse and hypertrophy. It collapses time into nostalgia while inflating one fractal limb—white nativist nationalism—into a cancerous dominant. In CG-BEST terms, it is a system violently pruning its own roots to feed a single distorted branch, like a tree grafting itself to death. The promised “greatness” is entropy in disguise: not the creative chaos of cosmic becoming, but the slow asphyxiation of a culture that has cut itself off from oxygen. Severance warns us that such projects always fail; the repressed “innie” eventually claws its way back. When MAGA’s bunker finally cracks, it won’t find restoration—only the sea.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./act1"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="chapter1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Life ⚓️</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="chapter3.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Resilience 🗡️❤️💰</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#severance-as-maga-allegory">Severance as MAGA Allegory</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#compare-to-cg-best">Compare to CG-BEST</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#severance-warns-us">Severance Warns Us</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  Copyright © 2025 Zeus
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
